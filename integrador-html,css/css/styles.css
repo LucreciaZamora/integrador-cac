@@ -1,0 +1,622 @@
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: Arial, Helvetica, sans-serif;
+   }
+   
+   /*header*/
+   
+   header {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 1rem;
+       color: white;
+       background-color: rgb(49, 54, 60);
+       position: fixed;
+       width: 100%;
+       top: 0;
+       left: 0;
+       z-index: 2;
+   }
+   
+   .header {
+       display: flex;
+       align-items: center;
+       padding: 0 1rem;
+   }
+
+   .header p {
+       font-size: 1.5rem;
+   }
+
+   .header img {
+       width: 25%;
+       cursor: pointer;
+   }
+
+   .header ul {
+       display: flex;
+       gap: 1rem;
+   }
+
+   .header ul li {
+       list-style: none;
+       font-size: 1.1rem;
+       cursor: pointer;
+   }
+
+   .header ul li:last-child{
+       color: rgb(6, 233, 135);
+   }
+
+   .header ul li:hover {
+       color: rgb(0, 255, 217);
+   }
+
+   .header ul li a {
+       text-decoration: none;
+       color: inherit;
+   }
+   
+   
+   /*main*/
+   .mainContent, main {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+   }
+   
+   .inicio {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       height: 100vh;
+       background-image: url(../assets/img/ba1.jpg);
+       background-size: 100% 100%;
+       color: rgb(255, 255, 255);
+       padding: 5rem;
+       position: relative;
+   }
+
+   .inicio::before {
+       content: "";
+       position: absolute;
+       top: 0;
+       right: 0;
+       bottom: 0;
+       left: 0;
+       background-color: rgba(0, 0, 0, 0.6); 
+   }
+   
+   .inicio p, h1, button{
+       align-self: flex-end;
+       text-align: end;
+       vertical-align: middle;
+       z-index: 1;
+   }
+
+   .inicio p {
+       font-size: 1.1rem;
+       margin-top: 1rem;
+       line-height: 1.5;
+       font-weight: 400;
+   }
+
+   .inicio h1 {
+       font-size: 2.2rem;
+   }
+
+   .inicio div {
+       display: flex;
+       align-self: flex-end;
+       gap: 1rem;
+   }
+
+   .inicio div button {
+       align-self: flex-end;
+       border: solid white 0.5px;
+       padding: 0.7rem 1.2rem;
+       margin-top: 1.5rem;
+       border-radius: 5px;
+       font-size: 1.2rem;
+       background-color: transparent;
+       color: white;
+       transition:  background-color ease 0.3s;
+   }
+
+   .inicio div button:nth-child(2){
+       background-color: rgb(56, 144, 59);
+       border: none;
+   }
+
+   .inicio div button:hover {
+       cursor: pointer;
+       background-color: rgb(0, 100, 176);
+       
+   }
+   .inicio div button:nth-child(2):hover {
+       cursor: pointer;
+       background-color: rgb(0, 176, 24);
+   }
+   
+   
+   /*section oradores*/
+   
+   .oradores {
+       display: flex;
+       padding: 1rem 1.5rem;
+       flex-direction: column;
+       gap: 1.3rem;
+   }
+   
+   .titulos {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       font-family:  Verdana, sans-serif;
+       text-transform: uppercase;
+   }
+
+   .titulos p {
+       font-size: 1.1rem;
+   }
+
+   .titulos h3 {
+       font-size: 2.7rem;
+   }
+   
+   /*cards*/   
+   .mainCards {
+       display: flex;
+       justify-content: center;
+       gap: 3rem;
+   }
+   
+   .cards_Oradores {
+       display: flex;
+       align-items: center;
+   }
+   
+   .card {
+       display: flex;
+       flex-direction: column;
+       width: 300px;
+       height: 600px;
+   }
+
+   .card img {
+       width: 100%;
+       border-radius: 3px;
+   }
+
+   .card div {
+       width: 100%;
+       height: auto;
+       padding: 1rem;
+       border: 1.5px solid #cacaca;
+       border-radius: 0 0 7px 7px;
+       position: relative;
+   }
+   
+   .card div > div {
+       display: flex;
+       gap: 0.5rem;
+       padding: 0;
+       width: fit-content;
+       height: fit-content;
+       border: none;
+   }
+   
+   .card div > p {
+       line-height: 1.6;
+       font-size: 1rem;  
+       margin-top: 1.5rem;
+       color: rgb(62, 62, 62);
+   }
+   
+   .card div > div > p {
+       z-index: 1;
+       background-color: rgb(250, 201, 4);
+       border-radius: 5px;
+       margin: 0;
+       padding: 0 3px;
+       font-size: 1rem;
+       font-weight: 500;
+       font-family: Arial, Helvetica, sans-serif;
+       z-index: 1;
+   }
+
+   .card div > div > p:nth-child(2){
+       background-color: rgb(24, 88, 166);
+       color: white;
+       z-index: 1;
+   }
+   
+   .card div h4 {
+       font-size: 1.3rem;
+       margin: 0.1rem 0;
+       z-index: 1;
+   }
+   
+   /*menu*/
+   
+   #BtnRed {
+       background-color: red;
+       color: white;
+   }
+   
+   #BtnGrey {
+       background-color: rgb(122, 122, 122);
+       color: white;
+   }
+   
+   /*lugar*/
+   
+   .lugar {
+       display: flex;
+       width: 100%;
+   }
+   
+   .lugar img {
+       width: 50%;
+   }
+
+   .lugar div {
+       width: 50%;
+       padding: 1.1rem;
+       background-color: rgb(53, 55, 60);
+       color: white;
+   }
+
+   .lugar div > h4 {
+       font-size: 1.5rem;
+   }
+
+   .lugar div > p {
+       margin-top: 0.6rem;
+       font-family: sans-serif;    
+       line-height: 2;
+       font-size: 13px;
+   }
+
+   .lugar div > button {
+       margin-top: 1rem;
+       padding: 0.5rem;
+       background-color: transparent;
+       color: white;
+       border: 1px solid white;
+       outline: none;
+       border-radius: 4px;
+       transition: background-color ease 0.3s ;
+   }
+
+   .lugar div > button:hover {
+       background-color: rgb(0, 100, 176);
+   }
+   
+   
+   /*formulario*/
+   .formulario_orador {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 100%;
+       margin-top: 1rem;
+   }
+   
+   .titulos_formularios {
+       margin: 1.3rem;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   }
+
+   .titulos_formularios p:nth-child(1) {
+       text-transform: uppercase;
+       font-size: 0.9rem;
+   }
+
+   .titulos_formularios h4 {
+       text-transform: uppercase;
+       padding-top: 0.5rem;
+       font-size: 2.4rem;
+       margin-bottom: 0.7rem;
+   }
+
+   .titulos_formularios p {
+       opacity: 0.7;
+   }
+
+   .titulos_formularios p > span {
+       text-decoration: underline;
+       text-decoration-style: dotted;
+   }
+   
+   .formulario {
+       display: flex;
+       width: 100%;
+       align-items: center;
+       justify-content: center;
+   }
+
+   .formulario form {
+       display: flex;
+       width: 100%;
+       align-items: center;
+       justify-content: center;   
+   }
+
+   .formulario form > div {
+       display: flex;
+       width: 43%;
+       flex-direction: column;
+      }
+
+   .formulario form > div > div {
+       display: flex;
+       justify-content: space-between;
+       width: 100%;
+   }
+
+   .formulario form > div > div > input {
+       padding: 0.5rem;
+       width: 48%;
+       border-radius: 4px;
+       outline: none;
+       border: solid rgb(46, 46, 46) 1px;
+       opacity: 0.6;
+       font-size: 1rem;
+   }
+
+   .formulario form > div > textarea {
+       height: 150px;
+       padding: 1rem;
+       margin-top: 1rem;
+       border-radius: 4px;
+       border: solid rgb(46, 46, 46) 1px;
+       outline: none;
+       resize: none;
+       opacity: 0.6;
+   }
+
+   .formulario form > div > textarea::placeholder {
+       font-size: 1.8rem;
+       z-index: 1;
+   }
+
+   .formulario form > div > p {
+       margin-top: 0.5rem;
+       font-size: 14px;
+       opacity: 0.6;
+   }
+
+   .formulario form > div > button {
+       width: 100%;
+       margin-top: 1rem;
+       padding: 0.5rem;
+       background-color: rgb(149, 198, 50);
+       color: rgb(255, 255, 255);
+       border: none;
+       border-radius: 5px;
+       text-align: center;
+       font-size: 1.5rem;
+       cursor: pointer;
+       transition: background-color ease 0.3s;
+   }
+
+   .formulario form > div > button:hover {
+       background-color: rgb(68, 255, 0);
+       color: rgb(42, 42, 42);
+   }
+      
+   /*footer*/
+   footer {
+       display: flex;
+       width: 100%;
+       margin-top: 1rem;
+   }
+
+   footer ul {
+       display: flex;
+       width: 100%;
+       list-style: none;
+       gap: 4.2rem;
+       align-items: center;
+       justify-content: center;
+       background-color: rgb(29, 55, 74);
+       padding: 2rem;
+   }
+
+   footer ul li {
+       color:white;
+       font-size: 14px;
+       font-family: Arial, Helvetica, sans-serif;
+       font-weight: 600;
+       line-height: 1.6;
+       transition: background-color ease 0.3s;
+       cursor: pointer;
+   }
+
+   footer ul li:hover {
+       color: rgb(2, 227, 227);
+   }
+   
+   /*responsive*/
+   .flex {
+       display: flex;
+       top: 0;
+       right: 0;
+   }
+   
+   /*hamburguesa*/
+   .menu-icon {
+       font-size: 30px;
+       padding: 10px;
+       cursor: pointer;
+       display: none;
+       z-index: 2;
+   }
+   
+   .menu-toggle {
+       display: none;
+       z-index: 2;
+   }
+   
+   /*menu*/
+   .menu-toggle:checked ~ nav {
+       display: flex;
+   
+   }
+
+   #label2 {
+       display: none;
+   }
+   /*oculta hamburguesa*/
+   .menu-toggle:checked ~ #label{
+       opacity: 0;
+   }
+   /*icono cruz*/
+   .menu-toggle:checked ~ #label2{
+       display: block;
+   }
+   
+   /*responsive*/
+   @media screen and (max-width: 768px) {
+       .menu-icon {
+           display: block;
+           position: absolute;
+           top: 1rem;
+           right: 2rem;
+       }
+       
+       nav {
+           display:none;
+           flex-direction: column;
+           align-items: center;
+           padding: 1.1rem;
+           width: 100%;
+           background-color: rgb(56, 57, 65);
+           position: absolute;
+           top: 0;
+           right: 0;
+           z-index: 1;
+           transition: right 0.3s ease;
+       }
+       
+       .header {
+           flex-direction: column;
+           align-items: center;
+       }
+
+       .header img {
+           width: 70%;
+       }
+
+       .header p {
+           font-size: 2rem;
+       }
+   
+       .header ul {
+           flex-direction: column;
+       }
+   
+       .header ul li {
+           font-size: 0.9rem;
+       }
+
+       .inicio {
+           padding: 1.5rem;
+           height: 50vh;
+           background-size: cover;
+           background-position: left center;
+       }
+   
+       .inicio h1 {
+           font-size: 1.9rem;
+       }
+   
+       .inicio p {
+           font-size: 0.9rem;
+       }
+
+       .inicio div button {
+           padding: 0.5rem;
+           font-size: 0.8rem;
+       }
+   
+       .titulos p {
+           font-size: 0.9rem;
+       }
+
+       .titulos h3 {
+           font-size: 1.9rem;
+       }
+   
+       .mainCards {
+           flex-direction: column;
+           align-items: center;
+           gap: 0rem;
+       }
+   
+       .card {
+           height: 560px;
+       }
+   
+       .lugar {
+           flex-direction: column;
+       }
+
+       .lugar img  {
+           width: 100%;
+       }
+
+       .lugar div {
+           width: 100%;
+       }
+
+       .lugar div > h4 {
+           font-size: 1.1rem;
+       }
+   
+       .lugar div > p {
+           font-size: 0.8rem;
+           font-weight: 500;
+       }
+   
+       .lugar div > button {
+           padding: 0.6rem;
+       }
+   
+       .formulario form > div > textarea::placeholder {
+           font-size: 1.1rem;
+       }
+   
+       .formulario form > div {
+           width: 75%;
+       }
+   
+       .formulario form > div > p {
+           font-size: 0.7rem;
+       }
+   
+       .titulos_formularios p {
+           font-size: 0.8rem;
+           text-align: center;
+       }
+   
+       footer ul {
+           flex-direction: column;
+           gap: 1rem
+       }
+
+       footer ul li {
+           letter-spacing: 2px;
+           font-size: 0.9rem;
+           cursor: pointer;
+       }
+   }
